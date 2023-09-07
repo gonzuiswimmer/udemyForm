@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
       render :new
     else
       if @order.save
+        session[:order_id] = @order.id
         redirect_to complete_orders_url
       else
         render :confirm
@@ -20,6 +21,14 @@ class OrdersController < ApplicationController
     end
   end
 
+  def complete
+    @order = Order.find_by(id: session[:order_id])
+    if @order.blank?
+      redirect_to new_order_path
+    end
+    session[:order_id] = nil
+  end
+  
 
 
   private
