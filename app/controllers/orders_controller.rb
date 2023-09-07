@@ -5,6 +5,10 @@ class OrdersController < ApplicationController
 
   def confirm
     @order = Order.new(order_params)
+
+    if @order.invalid?
+      render :new
+    end
   end
 
   def create
