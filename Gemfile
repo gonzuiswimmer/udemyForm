@@ -72,7 +72,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem "webdrivers"
   # 以下、コースで追加したgem ここから
   # テストデータ制御用のクラスを作る
   gem 'factory_bot_rails'
