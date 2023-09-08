@@ -73,4 +73,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  # 以下、コースで追加したgem ここから
+  # テストデータ制御用のクラスを作る
+  gem 'factory_bot_rails'
+  # rspec
+  gem 'rspec-rails'
+  # 以下、コースで追加したgem ここまで
 end
