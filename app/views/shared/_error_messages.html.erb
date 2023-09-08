@@ -1,0 +1,5 @@
+<% record.errors.full_messages_for(symbol).each do |message| %>
+  <div class='text-danger'>
+    *<%= message %>
+  </div>
+<% end %>

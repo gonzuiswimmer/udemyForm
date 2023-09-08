@@ -6,24 +6,36 @@
       <div class="mb-3">
         <%= f.label :name, class: "form-label border-start border-primary border-4 ps-1" %>
         <%= f.text_field :name, size:40, placeholder: "サンプル太郎", class: "form-control" %>
+        
+        <%= render partial: 'shared/error_messages', locals: {record: @order, symbol: :name} %>
+        
       </div>
     </div>
     <div class="col-md-6 mx-auto mb-5">
       <div class="mb-3">
         <%= f.label :email, class: "form-label border-start border-primary border-4 ps-1" %>
         <%= f.text_field :email, size:40, placeholder: "メールアドレス", class: "form-control" %>
+                
+        <%= render partial: 'shared/error_messages', locals: {record: @order, symbol: :email} %>
+        
       </div>
     </div>
     <div class="col-md-6 mx-auto mb-5">
       <div class="mb-3">
         <%= f.label :telephone, class: "form-label border-start border-primary border-4 ps-1" %>
         <%= f.text_field :telephone, size:100, placeholder: "電話番号", class: "form-control" %>
+                
+        <%= render partial: 'shared/error_messages', locals: {record: @order, symbol: :telephone} %>
+        
       </div>
     </div>
     <div class="col-md-6 mx-auto mb-5">
       <div class="mb-3">
         <%= f.label :delivery_address, class: "form-label border-start border-primary border-4 ps-1" %>
         <%= f.text_field :delivery_address, size:40, placeholder: "お届け先住所", class: "form-control" %>
+
+        <%= render partial: 'shared/error_messages', locals: {record: @order, symbol: :delivery_address} %>
+        
       </div>
     </div>
     
